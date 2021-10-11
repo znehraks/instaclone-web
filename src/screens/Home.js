@@ -13,7 +13,17 @@ const FEED_QUERY = gql`
       }
       file
       caption
-      comments
+      comments {
+        id
+        user {
+          username
+          avatar
+        }
+        payload
+        isMine
+        createdAt
+      }
+      commentNumber
       likes
       createdAt
       isMine
@@ -35,6 +45,9 @@ const Home = () => {
           file={photo.file}
           isLiked={photo.isLiked}
           likes={photo.likes}
+          caption={photo.caption}
+          commentNumber={photo.commentNumber}
+          comments={photo.comments}
           // {...photo}
         />
       ))}
