@@ -1,7 +1,7 @@
 # Instaclone Web
 
-- [] Router
-- [] Authentication
-- [] Arch.
-- [] Styles
-- [] Log In
+- [x] Router
+- [x] Authentication
+- [x] Arch.
+- [x] Styles
+- [] Log In / Sign Up
