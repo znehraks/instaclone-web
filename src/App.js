@@ -12,6 +12,7 @@ import { client, darkModeVar, isLoggedInVar } from "./apollo";
 import Layout from "./components/Layout";
 import Home from "./screens/Home";
 import Login from "./screens/Login";
+import Profile from "./screens/Profile";
 import routes from "./screens/routes";
 import SignUp from "./screens/SignUp";
 import { darkTheme, GlobalStyles, lightTheme } from "./styles";
@@ -40,6 +41,9 @@ function App() {
                   <SignUp />
                 </Route>
               ) : null}
+              <Route path={`/users/:username`}>
+                <Profile />
+              </Route>
               <Route>
                 <NotFound />
               </Route>
